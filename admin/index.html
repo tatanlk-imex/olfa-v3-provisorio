@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es-CL"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Administrador | OLFA Chile V3</title><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#000000">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#000;color:#f2f2f2;font-family:"Roboto Flex","Segoe UI",Arial,sans-serif;line-height:1.5}
+a{color:#ffd200}h1,h2,h3{color:#ffd200;margin:0 0 .5em}
+.aviso{background:#c00;color:#fff;text-align:center;padding:8px 12px;font-weight:700;font-size:.9rem}
+header.top{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:3px solid #ffd200;flex-wrap:wrap}
+header.top b{font-size:1.1rem}header.top span{color:#c9c9c9;font-size:.9rem}
+main{max-width:1180px;margin:0 auto;padding:22px}
+.caja{background:#111;border:1px solid #2a2a2a;border-radius:14px;padding:22px;margin-bottom:20px}
+.login{max-width:420px;margin:60px auto}
+label{display:block;font-weight:600;margin:12px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:11px 12px;border-radius:8px;border:2px solid #555;background:#fff;color:#000}
+textarea{min-height:90px}
+button,.btn{font:inherit;font-weight:700;background:#ffd200;color:#000;border:2px solid #ffd200;border-radius:8px;padding:9px 18px;cursor:pointer;text-decoration:none;display:inline-block}
+button.sec,.btn.sec{background:transparent;color:#ffd200}button.peq{padding:5px 12px;font-size:.85rem}
+button:disabled{opacity:.5;cursor:not-allowed}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tabs button{background:#000;color:#fff;border-color:#555}.tabs button.on{background:#ffd200;color:#000;border-color:#ffd200}
+table{width:100%;border-collapse:collapse}th{background:#ffd200;color:#000;text-align:left;padding:9px 10px}td{padding:8px 10px;border-bottom:1px solid #2a2a2a;vertical-align:middle}
+td img{width:54px;height:54px;object-fit:contain;background:#fff;border-radius:6px}
+.est{display:inline-block;border-radius:20px;padding:2px 10px;font-size:.78rem;font-weight:700}.est.on{background:#1e7b3a;color:#fff}.est.off{background:#444;color:#ddd}.est.edit{background:#ffd200;color:#000}
+.fila{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:14px}.fila input[type=search]{max-width:340px}
+.msg{padding:10px 14px;border-radius:8px;margin-top:12px;font-weight:600}.msg.err{background:#2a0e0e;color:#f3b0b0}.msg.ok{background:#0e2415;color:#a8e6bd}
+.nota{border-left:4px solid #ffd200;background:#1a1700;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:.93rem}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:800px){.dos{grid-template-columns:1fr}td img{display:none}}
+[hidden]{display:none!important}
+</style></head><body>
+<div class="aviso">ADMINISTRADOR DE DEMOSTRACIÓN · OLFA Chile V3 · los cambios se guardan solo en este navegador y no modifican el sitio publicado</div>
+<section id="vista-login" class="caja login"><h1>Administrador</h1><p>Ingresa con tu usuario y clave para probar el panel.</p>
+<form id="f-login" autocomplete="off"><label for="usr">Usuario</label><input id="usr" name="usr" required autocomplete="username"><label for="clv">Clave</label><input id="clv" name="clv" type="password" required autocomplete="current-password">
+<p><button type="submit">Ingresar</button></p><div id="m-login" class="msg err" role="alert" hidden></div></form>
+<p style="font-size:.85rem;color:#c9c9c9">Sitio de pruebas. El administrador completo (PHP + MySQL, roles, historial y publicación) se instala en el servidor de Imex.</p></section>
+
+<div id="vista-panel" hidden>
+<header class="top"><div><b>OLFA Chile · V3</b> <span id="quien"></span></div><div><a class="btn sec peq" href="../" target="_blank" rel="noopener">Ver el sitio</a> <button class="sec peq" id="salir" type="button">Cerrar sesión</button></div></header>
+<main>
+<div class="tabs" role="tablist"><button class="on" data-t="prod">Productos</button><button data-t="cont">Datos de contacto</button><button data-t="camb">Cambios</button><button data-t="ayuda">Ayuda</button></div>
+
+<section id="t-prod" class="caja"><h2>Productos <span id="cuenta" style="font-size:.9rem;color:#c9c9c9"></span></h2>
+<div class="fila"><input id="q" type="search" placeholder="Buscar por código o nombre" aria-label="Buscar"><select id="flt" aria-label="Filtro"><option value="">Todos</option><option value="vis">Visibles</option><option value="oculto">Ocultos</option><option value="dest">Destacados</option><option value="ed">Editados</option></select></div>
+<div style="overflow-x:auto"><table><thead><tr><th></th><th>Código</th><th>Nombre</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="lista"></tbody></table></div>
+<p id="paginas"></p></section>
+
+<section id="t-cont" class="caja" hidden><h2>Datos de contacto</h2><p>Teléfono, correo, dirección, horario y WhatsApp que se mostrarían en el sitio.</p>
+<div class="dos"><div><label>Teléfono</label><input data-c="telefono" value="(02) 2396 4622"></div><div><label>Correo</label><input data-c="correo" value="contacto@olfa.cl"></div>
+<div><label>Dirección</label><input data-c="direccion" value="Santa Bernardita 12025, Parque Industrial Puerta Sur, San Bernardo"></div><div><label>Horario</label><input data-c="horario" value="Lunes a Jueves de 8:30 a 16:30 - Viernes de 8:30 a 15:00"></div>
+<div><label>WhatsApp (formato 569XXXXXXXX)</label><input data-c="whatsapp" placeholder="Sin número definido"></div><div><label>Google Analytics</label><input data-c="ga4" value="G-SP5XMZLJ24"></div></div>
+<p><button id="g-cont" type="button">Guardar en este navegador</button></p><div id="m-cont" class="msg ok" hidden></div></section>
+
+<section id="t-camb" class="caja" hidden><h2>Cambios</h2><p>Resumen de lo que editaste. En el administrador real, el botón Publicar regenera el sitio con estos cambios.</p>
+<pre id="resumen" style="white-space:pre-wrap;background:#000;border:1px solid #2a2a2a;border-radius:8px;padding:12px;max-height:340px;overflow:auto"></pre>
+<p><button id="descargar" type="button">Descargar cambios (.json)</button> <label class="btn sec" style="margin:0">Cargar cambios<input id="cargar" type="file" accept=".json,application/json" hidden></label> <button class="sec" id="restablecer" type="button">Restablecer todo</button></p><div id="m-camb" class="msg ok" hidden></div></section>
+
+<section id="t-ayuda" class="caja" hidden><h2>Ayuda</h2>
+<ol><li><strong>Productos:</strong> busca, oculta o muestra, destaca y edita nombre y descripción corta.</li><li><strong>Datos de contacto:</strong> edita los datos que usa el sitio.</li><li><strong>Cambios:</strong> descarga un archivo con todo lo editado.</li></ol>
+<div class="nota"><strong>Esto es una demostración.</strong> GitHub Pages no tiene servidor: lo que cambies se guarda solo en tu navegador y no cambia el sitio publicado. El administrador real (usuarios con roles, historial, respaldos, vista previa y publicación) está en el código fuente de esta versión (carpeta admin_app) y se instala en el servidor de pruebas de Imex.</div>
+<div class="nota">La sesión se cierra tras 30 minutos sin actividad. Después de 5 intentos fallidos se bloquea el ingreso por 2 minutos.</div></section>
+</main></div>
+
+<div id="editor" class="caja" style="position:fixed;inset:5% 4%;z-index:50;overflow:auto;display:none;max-width:720px;margin:auto"><h2>Editar producto</h2><div id="ed-cod" style="color:#c9c9c9"></div>
+<label>Nombre</label><input id="ed-n"><label>Descripción corta</label><textarea id="ed-d"></textarea>
+<p><button id="ed-ok" type="button">Guardar</button> <button class="sec" id="ed-cancel" type="button">Cancelar</button> <button class="sec" id="ed-reset" type="button">Volver al original</button></p></div>
+
+<script>
+(function(){
+"use strict";
+var HUELLA="308f108536f49f9efaab37ce9ae0163136d445e560287a2ee84b936f0b517584", CLAVE_LS="olfa_admin_demo_V3", SES="olfa_admin_ses_V3";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function ls(k,v){try{if(v===undefined){return JSON.parse(localStorage.getItem(k)||"null")}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+var estado=ls(CLAVE_LS)||{prod:{},cont:{}};
+function guardar(){ls(CLAVE_LS,estado)}
+function sha(t){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(t)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return ("0"+x.toString(16)).slice(-2)}).join("")})}
+function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
+var PRODS=[],pag=1,POR=15,ultima=Date.now();
+function sesion(){try{var s=JSON.parse(sessionStorage.getItem(SES)||"null");return s&&Date.now()-s.t<1800000?s:null}catch(e){return null}}
+function entrar(u){try{sessionStorage.setItem(SES,JSON.stringify({u:u,t:Date.now()}))}catch(e){} mostrar()}
+function mostrar(){var s=sesion();$("#vista-login").hidden=!!s;$("#vista-panel").hidden=!s;if(s){$("#quien").textContent="· usuario: "+s.u;cargar()}}
+$("#f-login").addEventListener("submit",function(e){e.preventDefault();var m=$("#m-login"),b=ls(CLAVE_LS+"_b")||{n:0,h:0};
+ if(Date.now()<b.h){m.textContent="Demasiados intentos. Espera unos minutos.";m.hidden=false;return}
+ sha($("#clv").value).then(function(h){if(h===HUELLA){ls(CLAVE_LS+"_b",{n:0,h:0});$("#clv").value="";entrar($("#usr").value.trim()||"admin")}else{b.n++;if(b.n>=5){b.h=Date.now()+120000;b.n=0}ls(CLAVE_LS+"_b",b);m.textContent="Usuario o clave incorrectos.";m.hidden=false}})});
+$("#salir").addEventListener("click",function(){try{sessionStorage.removeItem(SES)}catch(e){} mostrar()});
+["click","keydown"].forEach(function(ev){document.addEventListener(ev,function(){var s=sesion();if(s){s.t=Date.now();try{sessionStorage.setItem(SES,JSON.stringify(s))}catch(e){}}})});
+setInterval(function(){if(!$("#vista-panel").hidden&&!sesion()){mostrar()}},30000);
+$$(".tabs button").forEach(function(b){b.addEventListener("click",function(){$$(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});["prod","cont","camb","ayuda"].forEach(function(t){$("#t-"+t).hidden=t!==b.getAttribute("data-t")});if(b.getAttribute("data-t")==="camb")resumen()})});
+function cargar(){if(PRODS.length){pintar();cont();return}fetch("productos.json").then(function(r){return r.json()}).then(function(d){PRODS=d;pintar();cont()}).catch(function(){$("#lista").innerHTML="<tr><td colspan=5>No se pudo cargar la lista de productos.</td></tr>"})}
+function p(id){return estado.prod[id]||(estado.prod[id]={})}
+function pintar(){var q=$("#q").value.toLowerCase(),f=$("#flt").value;
+ var l=PRODS.filter(function(x){var e=estado.prod[x.id]||{};var okq=!q||(x.n+" "+x.s).toLowerCase().indexOf(q)>-1;var okf=!f||(f==="vis"&&!e.oculto)||(f==="oculto"&&e.oculto)||(f==="dest"&&e.dest)||(f==="ed"&&(e.n||e.d));return okq&&okf});
+ var tp=Math.max(1,Math.ceil(l.length/POR));if(pag>tp)pag=tp;$("#cuenta").textContent="("+l.length+")";
+ $("#lista").innerHTML=l.slice((pag-1)*POR,pag*POR).map(function(x){var e=estado.prod[x.id]||{};
+  return "<tr><td>"+(x.i?"<img src=\"../"+esc(x.i)+"\" alt=\"\" loading=\"lazy\">":"")+"</td><td>"+esc(x.s||"-")+"</td><td><a href=\"../"+esc(x.u)+"\" target=\"_blank\" rel=\"noopener\">"+esc(e.n||x.n)+"</a></td>"
+  +"<td><span class=\"est "+(e.oculto?"off":"on")+"\">"+(e.oculto?"Oculto":"Visible")+"</span> "+(e.dest?"<span class=\"est edit\">Destacado</span> ":"")+((e.n||e.d)?"<span class=\"est edit\">Editado</span>":"")+"</td>"
+  +"<td><button class=\"peq sec\" data-a=\"vis\" data-id=\""+esc(x.id)+"\">"+(e.oculto?"Mostrar":"Ocultar")+"</button> <button class=\"peq sec\" data-a=\"dest\" data-id=\""+esc(x.id)+"\">"+(e.dest?"Quitar destaque":"Destacar")+"</button> <button class=\"peq\" data-a=\"ed\" data-id=\""+esc(x.id)+"\">Editar</button></td></tr>"}).join("");
+ var h="";for(var i=1;i<=tp;i++){h+="<button class=\"peq "+(i===pag?"":"sec")+"\" data-pg=\""+i+"\">"+i+"</button> "}$("#paginas").innerHTML=tp>1?h:""}
+$("#q").addEventListener("input",function(){pag=1;pintar()});$("#flt").addEventListener("change",function(){pag=1;pintar()});
+$("#paginas").addEventListener("click",function(e){var b=e.target.closest("[data-pg]");if(b){pag=parseInt(b.getAttribute("data-pg"),10);pintar()}});
+var editando=null;
+$("#lista").addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!b)return;var id=b.getAttribute("data-id"),a=b.getAttribute("data-a"),x=PRODS.filter(function(z){return z.id===id})[0],e2=p(id);
+ if(a==="vis"){e2.oculto=!e2.oculto;guardar();pintar()}else if(a==="dest"){e2.dest=!e2.dest;guardar();pintar()}
+ else if(a==="ed"){editando=id;$("#ed-cod").textContent="Código: "+(x.s||"-");$("#ed-n").value=e2.n||x.n;$("#ed-d").value=e2.d||x.d||"";$("#editor").style.display="block"}});
+$("#ed-cancel").addEventListener("click",function(){$("#editor").style.display="none"});
+$("#ed-ok").addEventListener("click",function(){var x=PRODS.filter(function(z){return z.id===editando})[0],e=p(editando),n=$("#ed-n").value.trim(),d=$("#ed-d").value.trim();
+ if(n&&n!==x.n){e.n=n}else{delete e.n}if(d&&d!==(x.d||"")){e.d=d}else{delete e.d}guardar();$("#editor").style.display="none";pintar()});
+$("#ed-reset").addEventListener("click",function(){var e=p(editando);delete e.n;delete e.d;guardar();$("#editor").style.display="none";pintar()});
+function cont(){$$("[data-c]").forEach(function(i){var k=i.getAttribute("data-c");if(estado.cont[k]!==undefined)i.value=estado.cont[k]})}
+$("#g-cont").addEventListener("click",function(){$$("[data-c]").forEach(function(i){estado.cont[i.getAttribute("data-c")]=i.value.trim()});guardar();var m=$("#m-cont");m.textContent="Guardado en este navegador.";m.hidden=false});
+function resumen(){var r=[];Object.keys(estado.prod).forEach(function(id){var e=estado.prod[id];if(e.oculto||e.dest||e.n||e.d){r.push(id+": "+[e.oculto?"oculto":"",e.dest?"destacado":"",e.n?"nombre editado":"",e.d?"descripción editada":""].filter(Boolean).join(", "))}});
+ var c=Object.keys(estado.cont);if(c.length)r.push("Contacto: "+c.join(", "));$("#resumen").textContent=r.length?r.join("\n"):"Aún no hay cambios."}
+$("#descargar").addEventListener("click",function(){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(estado,null,1)],{type:"application/json"}));a.download="cambios_olfa_V3.json";a.click()});
+$("#cargar").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result);if(d&&d.prod&&d.cont){estado=d;guardar();pintar();cont();resumen();var m=$("#m-camb");m.textContent="Cambios cargados.";m.hidden=false}}catch(x){}};r.readAsText(f)});
+$("#restablecer").addEventListener("click",function(){if(confirm("¿Restablecer todos los cambios hechos en este navegador?")){estado={prod:{},cont:{}};guardar();pintar();cont();resumen()}});
+mostrar();
+})();
+</script></body></html>
