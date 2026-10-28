@@ -1,0 +1,1319 @@
+{
+ "version": 1,
+ "marca": "olfa",
+ "nombre": "Asistente OLFA Chile",
+ "horario_txt": "Lunes a jueves de 8:30 a 16:30 y viernes de 8:30 a 15:00",
+ "contacto": {
+  "tel": "(02) 2396 4622",
+  "correo": "contacto@olfa.cl",
+  "direccion": "Santa Bernardita 12025, Parque Industrial Puerta Sur, San Bernardo"
+ },
+ "diag": {
+  "tx": [
+   "incluir el riesgo de corte en tu matriz IPER",
+   "definir qué cuchillo se usa en cada tarea",
+   "reemplazar los cuchillos de hoja expuesta por retráctiles o protegidos",
+   "tener un contenedor para las hojas usadas",
+   "capacitar en el uso y el cambio de hoja",
+   "registrar los incidentes por corte y revisar un indicador mensual"
+  ],
+  "titulo": "Autodiagnóstico de seguridad en el corte"
+ },
+ "horario": {
+  "1": [
+   "08:30",
+   "16:30"
+  ],
+  "2": [
+   "08:30",
+   "16:30"
+  ],
+  "3": [
+   "08:30",
+   "16:30"
+  ],
+  "4": [
+   "08:30",
+   "16:30"
+  ],
+  "5": [
+   "08:30",
+   "15:00"
+  ]
+ },
+ "inicio": "inicio",
+ "nodos": {
+  "inicio": {
+   "t": "¡Hola! Soy el asistente de *OLFA Chile* 👋 Somos Imex Estado Ltda., distribuidor exclusivo de OLFA: cuchillos de seguridad, cortadores industriales, de oficina y manualidades, y sus repuestos.\n\nTe oriento en pocos pasos y, cuando quieras, te conecto con un ejecutivo. ¿Qué necesitas?",
+   "op": [
+    [
+     "Cuchillos y cortadores",
+     "uso_tipo",
+     {
+      "motivo": "Cotización de cuchillos o cortadores"
+     }
+    ],
+    [
+     "Seguridad industrial",
+     "seg_tarea",
+     {
+      "motivo": "Cuchillos de seguridad industrial"
+     }
+    ],
+    [
+     "Repuestos y hojas",
+     "hoja_tipo",
+     {
+      "motivo": "Repuestos y hojas"
+     }
+    ],
+    [
+     "Guía prevencionista",
+     "guia_intro",
+     {
+      "motivo": "Guía para prevencionistas"
+     }
+    ],
+    [
+     "Dónde comprar",
+     "donde",
+     {
+      "motivo": "Dónde comprar o distribuidores"
+     }
+    ],
+    [
+     "Servicio y garantía",
+     "serv",
+     {
+      "motivo": "Servicio, garantía o reclamo"
+     }
+    ],
+    [
+     "Horario y contacto",
+     "info",
+     {}
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta general"
+     }
+    ]
+   ]
+  },
+  "uso_tipo": {
+   "t": "¿Para qué lo vas a usar? Así te muestro lo que mejor te sirve.",
+   "op": [
+    [
+     "Industrial y bodega",
+     "seg_tarea",
+     {
+      "motivo": "Cuchillos industriales o de seguridad"
+     }
+    ],
+    [
+     "Oficina y hogar",
+     "ofi_reco",
+     {
+      "motivo": "Cuchillos de oficina u hogar"
+     }
+    ],
+    [
+     "Manualidades",
+     "manu_tipo",
+     {
+      "motivo": "Cortadores para manualidades"
+     }
+    ]
+   ]
+  },
+  "seg_tarea": {
+   "t": "¿Qué tarea de corte quieres resolver?",
+   "op": [
+    [
+     "Abrir cajas de cartón",
+     "seg_reco",
+     {
+      "tarea": "abrir cajas de cartón",
+      "rec": "• SK-4: {SITIO}producto/cuchillo-de-seguridad-auto-retractil/\n• SK-5: {SITIO}producto/cuchillo-de-seguridad-auto-retractil-con-mango-antideslizante/\n• SK-9: {SITIO}producto/cuchillo-de-seguridad-auto-retractil-y-cortador-de-cinta/",
+      "nota": "Son de hoja auto-retráctil: se esconde al soltar el material."
+     }
+    ],
+    [
+     "Film y zunchos",
+     "seg_reco",
+     {
+      "tarea": "cortar film y zunchos",
+      "rec": "• SK-10: {SITIO}producto/cuchillo-de-maxima-seguridad-para-envolturas-y-cintas/\n• SK-15: {SITIO}producto/cuchillo-de-maxima-seguridad-desechable/\n• SK-16: {SITIO}producto/cuchillo-de-maxima-seguridad-con-sistema-de-corte-removible/",
+      "nota": "Son de máxima seguridad, con punta que rompe cintas sin dañar el contenido."
+     }
+    ],
+    [
+     "Bolsas sin dañar",
+     "seg_reco",
+     {
+      "tarea": "abrir bolsas y paquetes sin dañar el contenido",
+      "rec": "• PK-1: {SITIO}producto/cuchillo-tipo-pinza-abre-bolsas-y-paquetes/\n• SK-15: {SITIO}producto/cuchillo-de-maxima-seguridad-desechable/",
+      "nota": "La pinza PK-1 abre sin cortar el contenido."
+     }
+    ],
+    [
+     "Industria alimentaria",
+     "seg_reco",
+     {
+      "tarea": "trabajo en industria alimentaria",
+      "rec": "• SK-12: {SITIO}producto/cuchillo-de-seguridad-de-acero-inoxidable/\n• SK-15/L: {SITIO}producto/cuchillo-de-maxima-seguridad-desechable-4/\n• PK-1: {SITIO}producto/cuchillo-tipo-pinza-abre-bolsas-y-paquetes/",
+      "nota": "Según sus fichas, SK-12 y SK-15/L cuentan con certificado NSF; el SK-12 es detectable por detectores de metales. Pide la documentación vigente al cotizar."
+     }
+    ],
+    [
+     "Trabajo pesado",
+     "seg_reco",
+     {
+      "tarea": "corte pesado de materiales duros",
+      "rec": "• L7-AL: {SITIO}producto/cuchillo-industrial-de-18-mm-antideslizante-con-seguro-automatico/\n• XH-AL: {SITIO}producto/cuchillo-extra-fuerte-de-25-mm-antideslizante-con-seguro-automatico/\n• SK-16: {SITIO}producto/cuchillo-de-maxima-seguridad-con-sistema-de-corte-removible/",
+      "nota": "Cuchillos industriales con bloqueo automático y mango antideslizante; el SK-16 corta además caucho."
+     }
+    ],
+    [
+     "Raspar y limpiar",
+     "seg_reco",
+     {
+      "tarea": "raspar vidrios, pintura y adhesivos",
+      "rec": "• XSR-200: {SITIO}producto/cuchillo-raspador-de-100-mm/\n• GSR-1/3B: {SITIO}producto/cuchillo-tipo-raspador-de-vidrios-120-mm/\n• GSR-2: {SITIO}producto/cuchillo-tipo-raspador-de-vidrio-40-mm/",
+      "nota": "Raspadores de 40 a 120 mm con hojas de repuesto."
+     }
+    ],
+    [
+     "No estoy seguro",
+     "seg_dudas",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "seg_reco": {
+   "t": "Para *{tarea}* te conviene mirar:\n{rec}\n\n{nota}\n\nEs una orientación general: la elección final depende del procedimiento de tu empresa. Más ayuda: {SITIO}que-cuchillo-necesito/",
+   "op": [
+    [
+     "Cotizar esto",
+     "derivar",
+     {
+      "motivo": "Cotización: {tarea}"
+     }
+    ],
+    [
+     "Otra tarea",
+     "seg_tarea",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "seg_dudas": {
+   "t": "Sin problema. En la página *¿Qué cuchillo necesito?* eliges el material que cortas y te muestra los modelos: {SITIO}que-cuchillo-necesito/\n\nSi prefieres, un ejecutivo te recomienda por tarea y cantidad de personas.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Ver la guía",
+     "guia_intro",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "ofi_reco": {
+   "t": "Para oficina, librería u hogar sirven los *cuchillos estándar* de 9 y 12,5 mm, por ejemplo:\n• A-1: {SITIO}producto/cuchillo-estandar-de-9-mm-con-seguro-automatico-y-clip/\n• XA-1: {SITIO}producto/cuchillo-estandar-de-9-mm-antideslizante-con-seguro-automatico-y-clip/\n• L-2: {SITIO}producto/cuchillo-industrial-de-18-mm-con-incrustacion-antideslizante-y-seguro-manual/\n\nTambién hay planchas salvacortes y reglas acrílicas para cortar con precisión. Ver el catálogo: {SITIO}productos/",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Otro uso",
+     "uso_tipo",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "manu_tipo": {
+   "t": "¿Qué quieres cortar?",
+   "op": [
+    [
+     "Telas y patchwork",
+     "manu_reco",
+     {
+      "tarea": "telas y patchwork",
+      "rec": "• RTY-2G: {SITIO}producto/cuchillo-rotativo-45-mm/\n• RTY-1/C: {SITIO}producto/cuchillo-rotativo-28-mm/\n• CMP-3: {SITIO}producto/cuchillo-de-corte-con-cuchillo-rotativo-para-tela/\n• SCS-1: {SITIO}producto/tijeras-microdentadas-antideslizantes-de-140-mm/",
+      "nota": "Cuchillos rotativos, compás de corte y tijeras."
+     }
+    ],
+    [
+     "Papel y maquetería",
+     "manu_reco",
+     {
+      "tarea": "papel y maquetería",
+      "rec": "• AK-1: {SITIO}producto/cuchillo-tipo-lapiz-con-angulo-de-32/\n• L-2: {SITIO}producto/cuchillo-industrial-de-18-mm-con-incrustacion-antideslizante-y-seguro-manual/\n• XA-1: {SITIO}producto/cuchillo-estandar-de-9-mm-antideslizante-con-seguro-automatico-y-clip/",
+      "nota": "Cuchillos tipo lápiz y estándar para corte fino."
+     }
+    ],
+    [
+     "Acrílico y madera",
+     "manu_reco",
+     {
+      "tarea": "acrílico y tallado de madera",
+      "rec": "• PC-L: {SITIO}producto/cuchillo-corta-acrilico-grande-con-seguro-manual/\n• PC-S: {SITIO}producto/cuchillo-corta-acrilico-pequeno-con-seguro-manual/\n• CK-1: {SITIO}producto/cuchillo-metalico-de-18-mm-para-tallar-madera-con-seguro-manual/\n• CK-2: {SITIO}producto/cuchillo-de-acero-inoxidable-de-20-mm-para-tallar-madera-con-seguro-manual/",
+      "nota": "Cuchillos para marcar acrílico y tallar madera."
+     }
+    ],
+    [
+     "Planchas y reglas",
+     "manu_reco",
+     {
+      "tarea": "superficie y guía de corte",
+      "rec": "• RMICC: {SITIO}producto/plancha-salvacortes-45-x-30-cm/",
+      "nota": "Plancha salvacortes para proteger la mesa; hay otras medidas en el catálogo."
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "manu_reco": {
+   "t": "Para *{tarea}* te conviene mirar:\n{rec}\n\n{nota}\nVer más: {SITIO}categoria-producto/manualidades/",
+   "op": [
+    [
+     "Cotizar esto",
+     "derivar",
+     {
+      "motivo": "Cotización: {tarea}"
+     }
+    ],
+    [
+     "Otra cosa",
+     "manu_tipo",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "hoja_tipo": {
+   "t": "Cada cuchillo OLFA usa hojas de repuesto específicas. ¿Cómo te ayudo?",
+   "op": [
+    [
+     "Sé el código",
+     "hoja_cod",
+     {}
+    ],
+    [
+     "Busco por medida",
+     "hoja_medida",
+     {}
+    ],
+    [
+     "Qué hoja para qué uso",
+     "hoja_uso",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "hoja_cod": {
+   "t": "Escribe el *código de tu cuchillo* (ejemplos: SK-5, A-1, L-5).",
+   "pide": "modelo",
+   "val": "texto",
+   "sig": "hoja_res"
+  },
+  "hoja_res": {
+   "t": "Anotado: *{modelo}*. Para ver las hojas compatibles, escribe ese código en el buscador: {SITIO}que-hoja-usa-mi-cuchillo/\n\nSi no encuentras la hoja, un ejecutivo te la identifica.",
+   "op": [
+    [
+     "Pedir al ejecutivo",
+     "derivar",
+     {
+      "motivo": "Repuesto para el cuchillo {modelo}"
+     }
+    ],
+    [
+     "Otro código",
+     "hoja_cod",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "hoja_medida": {
+   "t": "¿Qué medida de hoja usa tu cuchillo? (viene en el empaque o en el mango)",
+   "op": [
+    [
+     "9 mm (estándar)",
+     "hoja_reco",
+     {
+      "med": "9 mm",
+      "rec": "• AB-10: papel, plástico, caucho, goma eva\n• SAB10: diseño gráfico, industrial y arquitectura\n• ASB-10S (acero inoxidable): materiales húmedos"
+     }
+    ],
+    [
+     "18 mm (industrial)",
+     "hoja_reco",
+     {
+      "med": "18 mm",
+      "rec": "• LB-10: cartulina, cartón, papel, goma eva\n• LBD-10 (15 segmentos): paneles de yeso, alfombra, pisos\n• LWB-3B (dentada): vinilo, tuberías, fibra de vidrio"
+     }
+    ],
+    [
+     "25 mm (extra fuerte)",
+     "hoja_reco",
+     {
+      "med": "25 mm",
+      "rec": "• HB-5B: plástico, caucho, cartón piedra\n• HSWB-1/1B (no fragmentable): madera y tuberías"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "hoja_reco": {
+   "t": "Hojas de *{med}* (ejemplos del catálogo):\n{rec}\n\nGuía completa y buscador por código: {SITIO}que-hoja-usa-mi-cuchillo/",
+   "op": [
+    [
+     "Pedir al ejecutivo",
+     "derivar",
+     {
+      "motivo": "Hojas de {med}"
+     }
+    ],
+    [
+     "Otra medida",
+     "hoja_medida",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "hoja_uso": {
+   "t": "Algunas hojas según el material:\n• Cartón y papel: LB-10 (18 mm), AB-10 (9 mm)\n• Alfombra y pisos: LBD-10\n• Vinilo y tuberías: LWB-3B\n• Trabajo duro: LSOL-10, HB-5B (25 mm)\n• Materiales húmedos: ASB-10S (inoxidable)\n\nTabla completa: {SITIO}que-hoja-usa-mi-cuchillo/",
+   "op": [
+    [
+     "Pedir al ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta de hojas por uso"
+     }
+    ],
+    [
+     "Buscar por medida",
+     "hoja_medida",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "guia_intro": {
+   "t": "La *guía para prevencionistas* explica cómo reducir el riesgo de corte con herramientas manuales: jerarquía de controles, marco normativo de referencia, modelos por tarea, autodiagnóstico y pauta mensual.\n\nLéela aquí: {SITIO}seguridad-industrial/\n\nEs una orientación general: no reemplaza la evaluación de riesgos de tu empresa ni a tu prevencionista.",
+   "op": [
+    [
+     "Autodiagnóstico",
+     "d1",
+     {
+      "d1": "",
+      "d2": "",
+      "d3": "",
+      "d4": "",
+      "d5": "",
+      "d6": ""
+     }
+    ],
+    [
+     "Planillas gratis",
+     "planillas",
+     {}
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ]
+   ]
+  },
+  "planillas": {
+   "t": "Tenemos *planillas Excel gratuitas*: plan de cuchillos por puesto y pauta mensual con indicador de cortes. También hay una calculadora del costo de un accidente por corte.\n\nDescárgalas: {SITIO}recursos-prevencionistas/\nCalculadora: {SITIO}calculadora-costo-accidentes/",
+   "op": [
+    [
+     "Autodiagnóstico",
+     "d1",
+     {}
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "d1": {
+   "t": "Pregunta 1 de 6\n¿El riesgo de corte con herramientas manuales está en tu matriz IPER?",
+   "op": [
+    [
+     "Sí",
+     "d2",
+     {
+      "d1": "si"
+     }
+    ],
+    [
+     "No",
+     "d2",
+     {
+      "d1": "no"
+     }
+    ]
+   ]
+  },
+  "d2": {
+   "t": "Pregunta 2 de 6\n¿Tienes definido qué cuchillo se usa en cada tarea de corte?",
+   "op": [
+    [
+     "Sí",
+     "d3",
+     {
+      "d2": "si"
+     }
+    ],
+    [
+     "No",
+     "d3",
+     {
+      "d2": "no"
+     }
+    ]
+   ]
+  },
+  "d3": {
+   "t": "Pregunta 3 de 6\n¿Reemplazaste los cuchillos de hoja expuesta por retráctiles o protegidos en cajas, film y zunchos?",
+   "op": [
+    [
+     "Sí",
+     "d4",
+     {
+      "d3": "si"
+     }
+    ],
+    [
+     "No",
+     "d4",
+     {
+      "d3": "no"
+     }
+    ]
+   ]
+  },
+  "d4": {
+   "t": "Pregunta 4 de 6\n¿Hay un contenedor para desechar las hojas usadas?",
+   "op": [
+    [
+     "Sí",
+     "d5",
+     {
+      "d4": "si"
+     }
+    ],
+    [
+     "No",
+     "d5",
+     {
+      "d4": "no"
+     }
+    ]
+   ]
+  },
+  "d5": {
+   "t": "Pregunta 5 de 6\n¿Capacitas en el uso correcto, el cambio de hoja y la posición de la mano?",
+   "op": [
+    [
+     "Sí",
+     "d6",
+     {
+      "d5": "si"
+     }
+    ],
+    [
+     "No",
+     "d6",
+     {
+      "d5": "no"
+     }
+    ]
+   ]
+  },
+  "d6": {
+   "t": "Pregunta 6 de 6\n¿Registras los incidentes por corte y revisas un indicador cada mes?",
+   "op": [
+    [
+     "Sí",
+     "diag",
+     {
+      "d6": "si"
+     }
+    ],
+    [
+     "No",
+     "diag",
+     {
+      "d6": "no"
+     }
+    ]
+   ]
+  },
+  "diag": {
+   "t": "Tu resultado: *{nivel_diag}* ({pts} de 6 puntos resueltos).\n{faltan}\nEs una orientación general, no reemplaza tu evaluación de riesgos. Un ejecutivo de Imex puede proponerte modelos por tarea.",
+   "op": [
+    [
+     "Pedir propuesta",
+     "derivar",
+     {
+      "motivo": "Propuesta por tarea (autodiagnóstico: {pts} de 6)"
+     }
+    ],
+    [
+     "Ver la guía",
+     "guia_intro",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ],
+   "accion": "diag"
+  },
+  "donde": {
+   "t": "*Imex Estado Ltda.* es el distribuidor exclusivo de OLFA en Chile. Vendemos a empresas, instituciones y distribuidores desde San Bernardo, y se cotiza con un ejecutivo.\n\nSi quieres vender OLFA en tu negocio: {SITIO}quiero-ser-distribuidor/\nTambién puedes pedir una visita: {SITIO}agenda-tu-visita/",
+   "op": [
+    [
+     "Cotizar para empresa",
+     "derivar",
+     {
+      "motivo": "Cotización para empresa"
+     }
+    ],
+    [
+     "Quiero distribuir",
+     "faq_distribuidor",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "serv": {
+   "t": "¿Con qué te ayudo?",
+   "op": [
+    [
+     "Garantía",
+     "faq_garantia",
+     {}
+    ],
+    [
+     "Reclamo o problema",
+     "faq_reclamo",
+     {}
+    ],
+    [
+     "Repuestos y hojas",
+     "hoja_tipo",
+     {}
+    ],
+    [
+     "Agendar una visita",
+     "faq_visita",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "info": {
+   "t": "*OLFA Chile* (Imex Estado Ltda.)\n📍 Santa Bernardita 12025, Parque Industrial Puerta Sur, San Bernardo\n📞 (02) 2396 4622\n✉️ contacto@olfa.cl\n🕘 Lunes a jueves de 8:30 a 16:30 y viernes de 8:30 a 15:00\n\nMapa: https://maps.google.com/?q=Santa+Bernardita+12025+San+Bernardo\nCatálogo: https://heyzine.com/flip-book/ebf2f798cc.html",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "derivar": {
+   "t": "Con gusto te conecto con un ejecutivo. Para que te atienda mejor, ¿cuál es tu *nombre*?",
+   "pide": "nombre",
+   "val": "texto",
+   "sig": "der_empresa"
+  },
+  "der_empresa": {
+   "t": "Gracias, {nombre}. ¿De qué *empresa o institución* eres? (si eres persona natural, escribe «particular»)",
+   "pide": "empresa",
+   "val": "texto",
+   "sig": "der_correo"
+  },
+  "der_correo": {
+   "t": "¿A qué *correo* te enviamos la cotización? (si prefieres que te contactemos solo por este chat, escribe «omitir»)",
+   "pide": "email",
+   "val": "email",
+   "omitir": true,
+   "sig": "der_tel"
+  },
+  "der_tel": {
+   "t": "¿Y un *teléfono* para llamarte? (opcional, escribe «omitir»)",
+   "pide": "tel",
+   "val": "tel",
+   "omitir": true,
+   "si_falta": "tel",
+   "sig": "der_fin"
+  },
+  "der_fin": {
+   "t": "¡Listo, {nombre}! Registré tu solicitud: *{motivo}*.\n\n{estado_horario}\n\nTambién puedes llamar al (02) 2396 4622 o escribir a contacto@olfa.cl. ¿Necesitas algo más?",
+   "op": [
+    [
+     "Menú principal",
+     "inicio"
+    ],
+    [
+     "Eso es todo",
+     "fin",
+     {}
+    ]
+   ],
+   "accion": "derivar"
+  },
+  "fin": {
+   "t": "¡Gracias por escribir a OLFA Chile! Si necesitas algo más, escribe *menú* cuando quieras. 👋"
+  },
+  "no_entiendo": {
+   "t": "No estoy seguro de haber entendido 🤔. Puedes elegir una opción o escribir, por ejemplo: «cuchillo de seguridad», «hojas de repuesto», «guía», «dónde comprar» u «horario».",
+   "op": [
+    [
+     "Menú principal",
+     "inicio"
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ]
+   ]
+  },
+  "faq_precio": {
+   "t": "Los *precios, el stock y los plazos* los confirma un ejecutivo, porque dependen del producto, la cantidad y el cliente. Cuéntame qué necesitas y primero te oriento; luego un ejecutivo te envía la cotización.",
+   "op": [
+    [
+     "Ver cuchillos",
+     "uso_tipo",
+     {
+      "motivo": "Cotización de cuchillos o cortadores"
+     }
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta de precio o disponibilidad"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_garantia": {
+   "t": "Las condiciones de garantía dependen del producto y de la compra. Un ejecutivo te las confirma con el código del producto y tu factura o boleta.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta de garantía"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_despacho": {
+   "t": "El despacho o retiro lo coordina un ejecutivo según tu ciudad y los productos. Los plazos y costos de envío los confirma al enviarte la cotización.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta de despacho"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_pago": {
+   "t": "Atendemos a empresas, instituciones y personas. La facturación, las formas de pago y las condiciones comerciales las coordina el ejecutivo junto con la cotización.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Consulta de pago o facturación"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_licitacion": {
+   "t": "Para licitaciones, convenios o compras institucionales, un ejecutivo revisa tu caso (bases, plazos y documentación). Déjame tus datos y te contacta.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Licitación o compra institucional"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_distribuidor": {
+   "t": "Si quieres distribuir o revender OLFA, completa el formulario {SITIO}quiero-ser-distribuidor/ o déjame tus datos y un ejecutivo comercial te contacta para conversar las condiciones.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Distribuidor o revendedor"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_reclamo": {
+   "t": "Lamento el inconveniente. Para atenderlo bien, te conecto con un ejecutivo que lo revisará contigo.",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Reclamo o problema con un producto"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_visita": {
+   "t": "Un ejecutivo de Imex puede visitar tu planta, bodega u oficina (o hacer una reunión online) para conocer tus tareas de corte y proponerte modelos por tarea. Pide la visita aquí: {SITIO}agenda-tu-visita/",
+   "op": [
+    [
+     "Hablar con ejecutivo",
+     "derivar",
+     {
+      "motivo": "Solicitud de visita"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_nsf": {
+   "t": "Según sus fichas, el *SK-12* y el *SK-15/L* cuentan con certificado NSF (industria alimentaria), y el SK-12 es detectable por detectores de metales. La documentación vigente se entrega al cotizar.\n\nModelos: {SITIO}industria-alimentaria/",
+   "op": [
+    [
+     "Cotizar mi planta",
+     "derivar",
+     {
+      "motivo": "Cuchillos para industria alimentaria"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_norma": {
+   "t": "Ninguna norma chilena exige un modelo ni una marca de cuchillo: piden identificar los riesgos y controlarlos (por ejemplo, Ley 16.744 y DS 594). Un cuchillo de seguridad ayuda a controlar el riesgo de corte, pero no puedo decir que «cumple la norma»: eso lo define tu prevencionista. Más en la guía: {SITIO}seguridad-industrial/",
+   "op": [
+    [
+     "Ver la guía",
+     "guia_intro",
+     {}
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_quien": {
+   "t": "*OLFA* es la marca japonesa que inventó la hoja segmentada en 1956. En Chile la distribuye en exclusiva *Imex Estado Ltda.*, desde San Bernardo.",
+   "op": [
+    [
+     "Ver cuchillos",
+     "uso_tipo",
+     {
+      "motivo": "Cotización de cuchillos o cortadores"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "faq_catalogo": {
+   "t": "Aquí está el catálogo en línea: https://heyzine.com/flip-book/ebf2f798cc.html\nY el catálogo del sitio: {SITIO}productos/",
+   "op": [
+    [
+     "Ver cuchillos",
+     "uso_tipo",
+     {
+      "motivo": "Cotización de cuchillos o cortadores"
+     }
+    ],
+    [
+     "Hablar con ejecutivo",
+     "derivar"
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  }
+ },
+ "intenciones": [
+  {
+   "p": [
+    "precio",
+    "precios",
+    "cuanto cuesta",
+    "cuánto cuesta",
+    "cuanto vale",
+    "cuánto vale",
+    "valor",
+    "descuento",
+    "oferta",
+    "stock",
+    "disponibilidad",
+    "plazo de entrega",
+    "cuanto demora",
+    "cuánto demora"
+   ],
+   "va": "faq_precio",
+   "set": {}
+  },
+  {
+   "p": [
+    "garantía",
+    "garantia",
+    "cuanto dura",
+    "cuánto dura"
+   ],
+   "va": "faq_garantia",
+   "set": {}
+  },
+  {
+   "p": [
+    "despacho",
+    "envío",
+    "envio",
+    "envios",
+    "envían",
+    "envian",
+    "regiones",
+    "retiro",
+    "retirar",
+    "entrega"
+   ],
+   "va": "faq_despacho",
+   "set": {}
+  },
+  {
+   "p": [
+    "factura",
+    "boleta",
+    "pago",
+    "pagar",
+    "transferencia",
+    "crédito",
+    "credito",
+    "orden de compra",
+    "tarjeta"
+   ],
+   "va": "faq_pago",
+   "set": {}
+  },
+  {
+   "p": [
+    "licitación",
+    "licitacion",
+    "mercado público",
+    "mercado publico",
+    "convenio",
+    "municipalidad",
+    "institución",
+    "institucion"
+   ],
+   "va": "faq_licitacion",
+   "set": {}
+  },
+  {
+   "p": [
+    "distribuidor",
+    "distribuir",
+    "revender",
+    "revendedor",
+    "mayorista"
+   ],
+   "va": "faq_distribuidor",
+   "set": {}
+  },
+  {
+   "p": [
+    "reclamo",
+    "reclamos",
+    "no funciona",
+    "defectuoso",
+    "defectuosa",
+    "devolución",
+    "devolucion",
+    "mala atención",
+    "mala atencion",
+    "se rompió",
+    "se rompio"
+   ],
+   "va": "faq_reclamo",
+   "set": {}
+  },
+  {
+   "p": [
+    "visita",
+    "visitan",
+    "agendar",
+    "terreno",
+    "demostración",
+    "demostracion",
+    "reunión",
+    "reunion"
+   ],
+   "va": "faq_visita",
+   "set": {}
+  },
+  {
+   "p": [
+    "nsf",
+    "inocuidad",
+    "alimentos",
+    "alimentaria",
+    "detector de metales",
+    "haccp"
+   ],
+   "va": "faq_nsf",
+   "set": {}
+  },
+  {
+   "p": [
+    "norma",
+    "normativa",
+    "ley 16.744",
+    "16744",
+    "ds 594",
+    "ds 40",
+    "ds 132",
+    "cumple",
+    "iper"
+   ],
+   "va": "faq_norma",
+   "set": {}
+  },
+  {
+   "p": [
+    "quiénes son",
+    "quienes son",
+    "quien es olfa",
+    "quién es olfa",
+    "quienes somos",
+    "japonesa",
+    "historia"
+   ],
+   "va": "faq_quien",
+   "set": {}
+  },
+  {
+   "p": [
+    "catálogo",
+    "catalogo",
+    "brochure"
+   ],
+   "va": "faq_catalogo",
+   "set": {}
+  },
+  {
+   "p": [
+    "prevencionista",
+    "prevención",
+    "prevencion",
+    "guía",
+    "guia",
+    "riesgo",
+    "accidente",
+    "accidentes",
+    "autodiagnóstico",
+    "autodiagnostico",
+    "pauta"
+   ],
+   "va": "guia_intro",
+   "set": {
+    "motivo": "Guía para prevencionistas"
+   }
+  },
+  {
+   "p": [
+    "planilla",
+    "planillas",
+    "excel",
+    "calculadora"
+   ],
+   "va": "planillas",
+   "set": {}
+  },
+  {
+   "p": [
+    "hoja",
+    "hojas",
+    "repuesto",
+    "repuestos",
+    "cuchilla",
+    "cuchillas",
+    "segmento",
+    "segmentos",
+    "recambio"
+   ],
+   "va": "hoja_tipo",
+   "set": {
+    "motivo": "Repuestos y hojas"
+   }
+  },
+  {
+   "p": [
+    "seguridad",
+    "retráctil",
+    "retractil",
+    "zuncho",
+    "zunchos",
+    "film",
+    "caja",
+    "cajas",
+    "bodega",
+    "minería",
+    "mineria",
+    "logística",
+    "logistica",
+    "pk-1",
+    "sk-4",
+    "sk-5",
+    "sk-10",
+    "sk-15",
+    "sk-16",
+    "industrial",
+    "industriales"
+   ],
+   "va": "seg_tarea",
+   "set": {
+    "motivo": "Cuchillos de seguridad industrial"
+   }
+  },
+  {
+   "p": [
+    "manualidad",
+    "manualidades",
+    "tela",
+    "telas",
+    "patchwork",
+    "costura",
+    "scrapbook",
+    "maqueta",
+    "maquetería",
+    "maqueteria",
+    "rotativo",
+    "plancha",
+    "regla"
+   ],
+   "va": "manu_tipo",
+   "set": {
+    "motivo": "Cortadores para manualidades"
+   }
+  },
+  {
+   "p": [
+    "oficina",
+    "hogar",
+    "escritorio",
+    "estudiante",
+    "librería",
+    "libreria"
+   ],
+   "va": "ofi_reco",
+   "set": {
+    "motivo": "Cuchillos de oficina u hogar"
+   }
+  },
+  {
+   "p": [
+    "cuchillo",
+    "cuchillos",
+    "cortador",
+    "cortadores",
+    "cutter",
+    "cúter",
+    "trinchete",
+    "cartonero",
+    "olfa",
+    "recomendar",
+    "recomiendan"
+   ],
+   "va": "uso_tipo",
+   "set": {
+    "motivo": "Cotización de cuchillos o cortadores"
+   }
+  },
+  {
+   "p": [
+    "donde comprar",
+    "dónde comprar",
+    "tienda",
+    "sucursal",
+    "comprar"
+   ],
+   "va": "donde",
+   "set": {
+    "motivo": "Dónde comprar o distribuidores"
+   }
+  },
+  {
+   "p": [
+    "horario",
+    "dirección",
+    "direccion",
+    "donde",
+    "dónde",
+    "ubicación",
+    "ubicacion",
+    "teléfono",
+    "telefono",
+    "contacto",
+    "correo",
+    "mapa"
+   ],
+   "va": "info",
+   "set": {}
+  }
+ ],
+ "comandos": {
+  "menu": [
+   "menu",
+   "menú",
+   "inicio",
+   "hola",
+   "buenas",
+   "buenos días",
+   "buenos dias",
+   "buenas tardes",
+   "volver",
+   "empezar",
+   "reiniciar"
+  ],
+  "ejecutivo": [
+   "ejecutivo",
+   "humano",
+   "persona",
+   "asesor",
+   "vendedor",
+   "agente",
+   "hablar con alguien",
+   "operador"
+  ],
+  "fin": [
+   "gracias",
+   "chao",
+   "adiós",
+   "adios",
+   "eso es todo",
+   "listo gracias",
+   "muchas gracias"
+  ]
+ },
+ "en_horario": "Un ejecutivo te contactará *hoy, dentro de nuestro horario de atención*.",
+ "fuera_horario": "Ahora estamos fuera de horario ({h}), pero tu solicitud quedó registrada: un ejecutivo te contactará el *próximo día hábil*."
+}
