@@ -7,7 +7,7 @@
   var $ = function (s) { return document.getElementById(s); };
   var btnAbrir = $("v3-chat-abrir"), ventana = $("v3-chat"), msgs = $("v3-chat-msgs"), form = $("v3-chat-form"), txt = $("v3-chat-txt");
   if (!btnAbrir || !ventana) { return; }
-  var F = null, E = { nodo: "", vars: {}, miss: 0, log: [], derivado: false };
+  var F = null, E = { nodo: "", vars: {}, miss: 0, log: [], derivado: false, hist: [] }, SIN_PUSH = false;
   var BASE = location.origin + RAIZ, CLAVE = MARCA + "_bot_v3";
 
   var norm = function (s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9.@ ]+/g, " ").replace(/\s+/g, " ").trim(); };
@@ -91,21 +91,31 @@
     };
     fetch(RAIZ + "api/contacto.php", { method: "POST", body: d, headers: { "X-Requested-With": "fetch" } }).then(function (r) { return r.json(); }).then(function (r) { if (!r || !r.ok) { fallo(); } }).catch(fallo);
   }
+  function volver() {
+    var prev = (E.hist || []).pop();
+    if (!prev) { return mostrarNodo(F.inicio); }
+    SIN_PUSH = true; mostrarNodo(prev);
+  }
   function mostrarNodo(id) {
     var n = F.nodos[id]; if (!n) { id = F.inicio; n = F.nodos[id]; }
     if (n.pide && n.si_falta && E.vars[n.si_falta]) { return mostrarNodo(n.sig); }
+    E.hist = E.hist || []; var raiz = (id === F.inicio || id === F.bienvenida || id === "fin");
+    if (raiz) { E.hist = []; } else if (E.nodo && E.nodo !== id && !SIN_PUSH) { E.hist.push(E.nodo); if (E.hist.length > 12) { E.hist.shift(); } }
+    SIN_PUSH = false;
     E.nodo = id; E.miss = 0;
     if (n.accion === "diag") { diagnostico(); }
     if (n.accion === "roi") { calculoCorte(); }
     var v = E.vars; v.estado_horario = enHorario() ? F.en_horario : F.fuera_horario.replace("{h}", F.horario_txt);
     if (n.accion === "derivar") { derivar(); }
     var ops = (n.op || []).map(function (o) { return { t: o[0], a: o[1], s: o[2] || {} }; });
+    if (E.hist.length && !raiz) { ops.push({ t: "↩ Volver", back: true }); }
     if (n.accion === "derivar" && B.wsp) { ops.unshift({ t: "Seguir por WhatsApp", href: "https://wa.me/" + B.wsp + "?text=" + encodeURIComponent(resumenLead()) }); }
     setTimeout(function () { burbuja("bot", plantilla(n.t, v)); chips(ops); }, 350);
     guardar();
   }
   function elegir(o) {
     quitarChips(); burbuja("yo", o.t);
+    if (o.back) { return volver(); }
     Object.keys(o.s || {}).forEach(function (k) { E.vars[k] = plantilla(o.s[k], E.vars); });
     mostrarNodo(o.a);
   }
@@ -116,6 +126,7 @@
   function texto(libre) {
     quitarChips(); burbuja("yo", libre);
     var t = norm(libre), n = F.nodos[E.nodo] || {};
+    if (tiene(t, F.comandos.atras || []) && t.length <= 24) { return volver(); }
     if (n.pide) {
       if (tiene(t, F.comandos.menu, true) && t.length <= 12) { return mostrarNodo(F.inicio); }
       var val = libre.trim(), v = E.vars;

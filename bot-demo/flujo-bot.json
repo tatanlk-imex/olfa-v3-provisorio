@@ -45,7 +45,7 @@
  "bienvenida": "bienvenida",
  "nodos": {
   "bienvenida": {
-   "t": "¡Hola! Soy el asistente virtual de *OLFA Chile* 👋 (Imex Estado Ltda., distribuidor exclusivo).\n\n*Cuéntame con tus palabras qué necesitas* (por ejemplo: «cuchillos de seguridad para una bodega» o «hojas para mi A-1») o elige una opción. Cuando quieras, te conecto con un ejecutivo.\n\nAl escribirme aceptas que usemos tus datos para atenderte: {SITIO}politica-de-privacidad/",
+   "t": "¡Hola! Soy el asistente virtual de *OLFA Chile* 👋 (Imex Estado Ltda., distribuidor exclusivo).\n\n*Cuéntame con tus palabras qué necesitas* (por ejemplo: «cuchillos de seguridad para una bodega» o «hojas para mi L-5») o elige una opción. Cuando quieras, te conecto con un ejecutivo.\n\nAl escribirme aceptas que usemos tus datos para atenderte: {SITIO}politica-de-privacidad/",
    "op": [
     [
      "Elegir cuchillo",
@@ -388,7 +388,7 @@
    ]
   },
   "hoja_cod": {
-   "t": "Escribe el *código de tu cuchillo* (ejemplos: SK-5, A-1, L-5).",
+   "t": "Escribe el *código de tu cuchillo* (ejemplos: L-5, SK-5, XH-1).",
    "pide": "modelo",
    "val": "texto",
    "sig": "hoja_res"
@@ -1953,9 +1953,21 @@
    "buenos días",
    "buenos dias",
    "buenas tardes",
-   "volver",
    "empezar",
-   "reiniciar"
+   "reiniciar",
+   "menu principal",
+   "menú principal"
+  ],
+  "atras": [
+   "volver",
+   "atrás",
+   "atras",
+   "anterior",
+   "regresar",
+   "paso atrás",
+   "paso atras",
+   "menu anterior",
+   "menú anterior"
   ],
   "ejecutivo": [
    "ejecutivo",
