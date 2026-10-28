@@ -61,6 +61,20 @@
      }
     ],
     [
+     "Prevención de cortes",
+     "exp_menu",
+     {
+      "motivo": "Prevención de cortes"
+     }
+    ],
+    [
+     "Ahorro e inversión",
+     "v_inversion",
+     {
+      "motivo": "Ahorro e inversión en cuchillos de seguridad"
+     }
+    ],
+    [
      "Repuestos y hojas",
      "hoja_tipo",
      {
@@ -209,6 +223,11 @@
     [
      "Otra tarea",
      "seg_tarea",
+     {}
+    ],
+    [
+     "Ver el ahorro",
+     "v_inversion",
      {}
     ],
     [
@@ -688,6 +707,453 @@
     ]
    ]
   },
+  "exp_menu": {
+   "t": "Te cuento lo que sé de *prevención de cortes con herramientas manuales* ✂️. ¿Qué quieres saber?",
+   "op": [
+    [
+     "Por qué ocurren cortes",
+     "exp_causas",
+     {}
+    ],
+    [
+     "Jerarquía de controles",
+     "exp_jerarquia",
+     {}
+    ],
+    [
+     "Tipos de cuchillo seguro",
+     "exp_tipos",
+     {}
+    ],
+    [
+     "Cambio seguro de hoja",
+     "exp_hoja",
+     {}
+    ],
+    [
+     "Capacitar al equipo",
+     "exp_capacitar",
+     {}
+    ],
+    [
+     "Evaluar mis tareas",
+     "exp_evaluar",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_causas": {
+   "t": "Las causas que más repiten las guías de seguridad laboral (HSE de Reino Unido, WorkSafe, aseguradoras y OLFA):\n1. *Hoja sin filo*: obliga a hacer más fuerza y el cuchillo se resbala.\n2. *Mano contraria en la línea de corte*, sujetando el material.\n3. *Hoja expuesta de más*, o cuchillo abierto en la mesa o el bolsillo.\n4. *Cortar hacia el cuerpo* o sin una superficie firme.\n5. *Usar el cuchillo para otra cosa* (destornillar, hacer palanca): la hoja se quiebra.\n6. *Cambiar la hoja* sin cuidado: es un momento de riesgo.\n\n¿Seguimos?",
+   "op": [
+    [
+     "Ver los controles",
+     "exp_jerarquia",
+     {}
+    ],
+    [
+     "Ver el ahorro",
+     "v_inversion",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_jerarquia": {
+   "t": "Se ordenan de lo más efectivo a lo menos:\n1. *Eliminar* el corte (material ya cortado, envases que se abren sin cuchillo).\n2. *Sustituir* el cuchillo de hoja fija y expuesta por uno de seguridad.\n3. *Ingeniería*: hoja que se retrae sola o queda protegida, y contenedor para hojas usadas.\n4. *Administrativos*: un cuchillo por tarea, hojas de repuesto en bodega, retirar los inadecuados, capacitación y pauta mensual.\n5. *Protección personal*: guantes resistentes a cortes y protección de ojos, como última barrera.\n\nUn cuchillo de seguridad actúa en los pasos 2 y 3. Guía completa: {SITIO}seguridad-industrial/",
+   "op": [
+    [
+     "Tipos de cuchillo",
+     "exp_tipos",
+     {}
+    ],
+    [
+     "Capacitar al equipo",
+     "exp_capacitar",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_tipos": {
+   "t": "OLFA agrupa sus cuchillos de seguridad en tres tipos:\n• *Semiautomático*: la hoja se retrae al levantarlo del material (por ejemplo SK-4, SK-7, SK-9).\n• *Automático*: se retrae solo y el deslizador no lo anula (SK-6, SK-8).\n• *Hoja oculta*: la hoja va siempre protegida en un canal (SK-10, SK-15, SK-16); el SK-15 es desechable.\nSe elige según la tarea y cómo calza en la mano de quien lo usa. Modelos por tarea: {SITIO}que-cuchillo-necesito/",
+   "op": [
+    [
+     "Elegir por tarea",
+     "seg_tarea",
+     {}
+    ],
+    [
+     "Ver el ahorro",
+     "v_inversion",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_hoja": {
+   "t": "Cambiar la hoja es un momento de riesgo; conviene un procedimiento simple:\n1. Sigue el instructivo del modelo; no improvises con destornilladores.\n2. En hojas segmentadas, quiebra el segmento gastado como indica el instructivo, *lejos del cuerpo* y sin tocar el filo.\n3. Echa los segmentos usados de inmediato a un *contenedor de hojas* (DC-3 o DC-5), nunca a la basura suelta ni al bolsillo. DC-5: {SITIO}producto/contenedor-de-cinturon-reutilizable-para-fragmentar-y-desechar-segmentos-de-hojas-usadas/\n4. Si no quieren cambiar hojas, el SK-15 es desechable: se reemplaza el cuchillo completo.\n5. Tener hojas de repuesto en bodega evita seguir cortando con filo gastado.",
+   "op": [
+    [
+     "Capacitar al equipo",
+     "exp_capacitar",
+     {}
+    ],
+    [
+     "Repuestos y hojas",
+     "hoja_tipo",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_capacitar": {
+   "t": "Un cuchillo seguro funciona mejor con una capacitación breve y constante:\n1. *Charla de 5 minutos* al entregar la herramienta: mano fuera de la línea de corte, cortar alejándose del cuerpo y exponer la hoja lo justo.\n2. *Una herramienta por tarea*, conocida por todos.\n3. *Piloto con quienes más cortan*: la mayoría cuesta dejar el cuchillo de siempre; si lo prueban y opinan, ayudan a convencer al resto.\n4. *Pauta mensual* y un indicador simple (cortes cada 100 trabajadores al mes). Planillas gratis: {SITIO}recursos-prevencionistas/\n\nQué herramienta usar en cada tarea lo define tu prevencionista según tu matriz IPER.",
+   "op": [
+    [
+     "Evaluar mis tareas",
+     "exp_evaluar",
+     {}
+    ],
+    [
+     "Autodiagnóstico",
+     "d1",
+     {
+      "d1": "",
+      "d2": "",
+      "d3": "",
+      "d4": "",
+      "d5": "",
+      "d6": ""
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "exp_evaluar": {
+   "t": "Una *evaluación de tareas de corte* mira qué se corta, quién lo hace, con qué herramienta y cuántas veces al día, y propone un cuchillo por tarea. En Imex un ejecutivo puede hacerla contigo en tu planta o por reunión online: {SITIO}agenda-tu-visita/\n\nSi me cuentas tu rubro y cuántas personas cortan, te dejo una propuesta inicial ahora mismo.",
+   "op": [
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Agendar visita",
+     "faq_visita",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "v_inversion": {
+   "t": "Mirado como inversión, un cuchillo OLFA es simple:\n1. *Se compra una vez*: el cuchillo dura y después solo se reponen *hojas* (la hoja segmentada renueva el filo quebrando el segmento gastado).\n2. *Cuida a las personas*: los modelos de seguridad reducen la exposición al filo y los cortes con licencia.\n3. *Menos cortes = menos costos ocultos*: días perdidos, reemplazos, reentrenamiento y papeleo. Según guías de seguridad laboral (OSHA y NSC, EE. UU.), los costos indirectos de un accidente suelen ser varias veces el directo.\n4. *Trabajo mejor hecho*: filo siempre listo, cortes más limpios y menos fuerza.\n\nNo te doy cifras ajenas: *calcula con tus números*.",
+   "op": [
+    [
+     "Calcular mi costo",
+     "v_roi",
+     {
+      "dias": "",
+      "costo": "",
+      "accid": ""
+     }
+    ],
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Por qué OLFA",
+     "v_porque",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "v_porque": {
+   "t": "Por qué OLFA:\n• Es la marca japonesa que inventó la hoja segmentada (1956) y se usa en más de 100 países, según OLFA.\n• Tiene más de 50 modelos de cuchillos de hoja segmentada y más de 200 productos de corte, para cada tarea (según OLFA).\n• Cada cuchillo tiene sus hojas de repuesto: compras el cuchillo una vez y repones hojas.\n• Línea de seguridad de tres tipos (semiautomático, automático y hoja oculta) y contenedores para hojas usadas.\n• En Chile, Imex es el distribuidor exclusivo: orientación técnica, visita a tu planta y repuestos con un solo proveedor.",
+   "op": [
+    [
+     "Calcular mi costo",
+     "v_roi",
+     {
+      "dias": "",
+      "costo": "",
+      "accid": ""
+     }
+    ],
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "v_roi": {
+   "t": "Calculemos con tus números. ¿Cuántos *días de licencia* deja, más o menos, un corte de mano? (un número, ej.: 7)",
+   "pide": "dias",
+   "val": "num",
+   "sig": "v_roi2"
+  },
+  "v_roi2": {
+   "t": "¿Cuánto cuesta *cada día* de tener a esa persona fuera, en pesos? (sueldo diario más reemplazo o tarea detenida; ej.: 60000)",
+   "pide": "costo",
+   "val": "num",
+   "sig": "v_roi3"
+  },
+  "v_roi3": {
+   "t": "¿Cuántos *cortes con herramientas manuales* tienen al año, más o menos? (ej.: 3)",
+   "pide": "accid",
+   "val": "num",
+   "sig": "v_roi_res"
+  },
+  "v_roi_res": {
+   "t": "{roi_txt}\n\nEs una estimación solo con tus datos (sin multas, primas ni daños). Cada corte que se evita ahorra ese monto, y equipar al equipo es una inversión única más repuestos. Un ejecutivo te cotiza el equipamiento para que lo compares con este costo.",
+   "op": [
+    [
+     "Pedir cotización",
+     "derivar",
+     {
+      "motivo": "Cotización de equipamiento (costo de cortes: {anual_txt} al año)"
+     }
+    ],
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ],
+   "accion": "roi"
+  },
+  "v_rubro": {
+   "t": "Armemos una propuesta inicial. ¿En qué rubro trabajas?",
+   "op": [
+    [
+     "Minería",
+     "v_personas",
+     {
+      "rubro": "minería",
+      "foco": "cajas, film y zunchos de insumos y repuestos, cortes en caucho y raspado de residuos",
+      "rec": "• SK-4: {SITIO}producto/cuchillo-de-seguridad-auto-retractil/\n• SK-5: {SITIO}producto/cuchillo-de-seguridad-auto-retractil-con-mango-antideslizante/\n• SK-16: {SITIO}producto/cuchillo-de-maxima-seguridad-con-sistema-de-corte-removible/\n• L7-AL: {SITIO}producto/cuchillo-industrial-de-18-mm-antideslizante-con-seguro-automatico/\n• XSR-200: {SITIO}producto/cuchillo-raspador-de-100-mm/"
+     }
+    ],
+    [
+     "Logística y bodegas",
+     "v_personas",
+     {
+      "rubro": "logística y bodegas",
+      "foco": "cajas, film y zunchos en recepción y despacho",
+      "rec": "• SK-4: {SITIO}producto/cuchillo-de-seguridad-auto-retractil/\n• SK-9: {SITIO}producto/cuchillo-de-seguridad-auto-retractil-y-cortador-de-cinta/\n• SK-15: {SITIO}producto/cuchillo-de-maxima-seguridad-desechable/"
+     }
+    ],
+    [
+     "Retail y supermercados",
+     "v_personas",
+     {
+      "rubro": "retail y supermercados",
+      "foco": "reposición de góndolas y apertura de cajas",
+      "rec": "• SK-7: {SITIO}producto/cuchillo-de-seguridad-auto-retractil-compacto/\n• A-1: {SITIO}producto/cuchillo-estandar-de-9-mm-con-seguro-automatico-y-clip/"
+     }
+    ],
+    [
+     "Industria alimentaria",
+     "v_personas",
+     {
+      "rubro": "industria alimentaria",
+      "foco": "bolsas, paquetes y envases (NSF según fichas)",
+      "rec": "• PK-1: {SITIO}producto/cuchillo-tipo-pinza-abre-bolsas-y-paquetes/\n• SK-12: {SITIO}producto/cuchillo-de-seguridad-de-acero-inoxidable/\n• SK-15/L: {SITIO}producto/cuchillo-de-maxima-seguridad-desechable-4/"
+     }
+    ],
+    [
+     "Construcción",
+     "v_personas",
+     {
+      "rubro": "construcción",
+      "foco": "alfombras, pisos, pintura y vidrios",
+      "rec": "• OL: {SITIO}producto/cuchillo-industrial-de-18-mm-para-cortar-alfombras/\n• 45-C: {SITIO}producto/cuchillo-corta-alfombra-con-hoja-circular/\n• XSR-200: {SITIO}producto/cuchillo-raspador-de-100-mm/\n• GSR-1/3B: {SITIO}producto/cuchillo-tipo-raspador-de-vidrios-120-mm/"
+     }
+    ],
+    [
+     "Talleres e industria",
+     "v_personas",
+     {
+      "rubro": "talleres e industria",
+      "foco": "cortes pesados y repetitivos, con aceite",
+      "rec": "• WD-L: {SITIO}producto/cuchillo-industrial-de-18-mm-antideslizante-3/\n• LL: {SITIO}producto/cuchillo-industrial-de-18-mm-para-trabajos-pesados/\n• XH-1: {SITIO}producto/cuchillo-extra-fuerte-de-25-mm-antideslizante-con-seguro-manual/\n• DL-1: {SITIO}producto/cuchillo-industrial-de-18-mm-con-contenedor-de-segmentos-de-hojas-usadas/"
+     }
+    ],
+    [
+     "Imprenta y packaging",
+     "v_personas",
+     {
+      "rubro": "imprenta y packaging",
+      "foco": "papel, cartón y planchas",
+      "rec": "• L-2: {SITIO}producto/cuchillo-industrial-de-18-mm-con-incrustacion-antideslizante-y-seguro-manual/\n• PRC-3/C: {SITIO}producto/cuchillo-rotativo-para-prepicar-de-28-mm/\n• RMICC: {SITIO}producto/plancha-salvacortes-45-x-30-cm/"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "v_personas": {
+   "t": "¿Cuántas personas cortan a diario?",
+   "op": [
+    [
+     "Hasta 10",
+     "v_propuesta",
+     {
+      "personas": "hasta 10"
+     }
+    ],
+    [
+     "11 a 50",
+     "v_propuesta",
+     {
+      "personas": "11 a 50"
+     }
+    ],
+    [
+     "51 a 200",
+     "v_propuesta",
+     {
+      "personas": "51 a 200"
+     }
+    ],
+    [
+     "Más de 200",
+     "v_propuesta",
+     {
+      "personas": "más de 200"
+     }
+    ]
+   ]
+  },
+  "v_propuesta": {
+   "t": "*Propuesta inicial para {rubro}* ({personas} personas):\n1. *Piloto* con los modelos que calzan con {foco}:\n{rec}\n2. *Contenedor de hojas* por área (DC-5: {SITIO}producto/contenedor-de-cinturon-reutilizable-para-fragmentar-y-desechar-segmentos-de-hojas-usadas/) y hojas de repuesto en bodega.\n3. *Charla de 5 minutos* y pauta mensual (planillas gratis).\n4. Después, *solo repones hojas*: el cuchillo sigue en uso.\n\nUn ejecutivo ajusta modelos y cantidades y te cotiza.",
+   "op": [
+    [
+     "Quiero cotizar",
+     "derivar",
+     {
+      "motivo": "Propuesta {rubro}, {personas} personas"
+     }
+    ],
+    [
+     "Agendar visita",
+     "derivar",
+     {
+      "motivo": "Visita: propuesta {rubro}, {personas} personas"
+     }
+    ],
+    [
+     "Calcular ahorro",
+     "v_roi",
+     {
+      "dias": "",
+      "costo": "",
+      "accid": ""
+     }
+    ]
+   ]
+  },
+  "obj_caro": {
+   "t": "Es cierto: un cuchillo OLFA parte más caro que un cúter básico. Pero se compra una vez y después solo repones hojas, que se renuevan segmento a segmento. Y el costo que importa no es el cuchillo: es lo que cuesta *un* corte con licencia. Calcúlalo con tus números y compara; los precios los confirma un ejecutivo, sin compromiso.",
+   "op": [
+    [
+     "Calcular mi costo",
+     "v_roi",
+     {
+      "dias": "",
+      "costo": "",
+      "accid": ""
+     }
+    ],
+    [
+     "Pedir cotización",
+     "derivar",
+     {
+      "motivo": "Cotización (consulta por precio)"
+     }
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "obj_ya_uso": {
+   "t": "Muchas empresas parten igual: el cuchillo de hoja fija «siempre se ha usado». El riesgo es que deja el filo a la vista todo el día y, con la hoja gastada, se hace más fuerza. Cambiar la herramienta es el control más efectivo después de eliminar el corte. Una forma simple de partir: un *piloto* en una sola área, con quienes más cortan.",
+   "op": [
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Ver los controles",
+     "exp_jerarquia",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
+  "obj_no_usan": {
+   "t": "Es normal: a mucha gente le cuesta dejar el cuchillo de siempre. Funciona mejor:\n1. Elegir el modelo *junto con quienes cortan*.\n2. Un piloto corto en un área.\n3. Una charla breve de uso.\n4. Que el jefe de turno lo use y lo exija.\n5. Medir los cortes antes y después.",
+   "op": [
+    [
+     "Capacitar al equipo",
+     "exp_capacitar",
+     {}
+    ],
+    [
+     "Armar propuesta",
+     "v_rubro",
+     {}
+    ],
+    [
+     "Menú principal",
+     "inicio"
+    ]
+   ]
+  },
   "derivar": {
    "t": "Con gusto te conecto con un ejecutivo. Para que te atienda mejor, ¿cuál es tu *nombre*?",
    "pide": "nombre",
@@ -1121,6 +1587,180 @@
   },
   {
    "p": [
+    "caro",
+    "costoso",
+    "muy caro",
+    "sale mucho",
+    "barato",
+    "economico",
+    "económico",
+    "mas barato",
+    "más barato"
+   ],
+   "va": "obj_caro",
+   "set": {}
+  },
+  {
+   "p": [
+    "ahorro",
+    "ahorrar",
+    "inversion",
+    "inversión",
+    "rentable",
+    "roi",
+    "retorno",
+    "vale la pena",
+    "conviene",
+    "beneficio",
+    "beneficios",
+    "costos ocultos",
+    "costo de un accidente",
+    "cuanto cuesta un accidente",
+    "cuánto cuesta un accidente"
+   ],
+   "va": "v_inversion",
+   "set": {
+    "motivo": "Ahorro e inversión en cuchillos de seguridad"
+   }
+  },
+  {
+   "p": [
+    "por que olfa",
+    "por qué olfa",
+    "ventajas",
+    "diferencia",
+    "diferencias",
+    "mejor que",
+    "por que comprar",
+    "por qué comprar",
+    "convencer"
+   ],
+   "va": "v_porque",
+   "set": {}
+  },
+  {
+   "p": [
+    "ya uso",
+    "ya tengo",
+    "uso cuter",
+    "uso cúter",
+    "siempre hemos usado",
+    "siempre hemos ocupado"
+   ],
+   "va": "obj_ya_uso",
+   "set": {}
+  },
+  {
+   "p": [
+    "no lo usan",
+    "no quieren",
+    "se resisten",
+    "resistencia",
+    "no les gusta",
+    "no los quieren usar"
+   ],
+   "va": "obj_no_usan",
+   "set": {}
+  },
+  {
+   "p": [
+    "causas",
+    "por que se cortan",
+    "por qué se cortan",
+    "como evitar cortes",
+    "cómo evitar cortes",
+    "evitar accidentes",
+    "prevenir cortes",
+    "prevenir accidentes",
+    "prevención de cortes",
+    "prevencion de cortes",
+    "cortes en las manos",
+    "lesiones de mano"
+   ],
+   "va": "exp_menu",
+   "set": {
+    "motivo": "Prevención de cortes"
+   }
+  },
+  {
+   "p": [
+    "jerarquia",
+    "jerarquía",
+    "controles",
+    "guantes",
+    "eliminar el riesgo"
+   ],
+   "va": "exp_jerarquia",
+   "set": {}
+  },
+  {
+   "p": [
+    "cambiar hoja",
+    "cambiar hojas",
+    "cambiar las hojas",
+    "cambio de hoja",
+    "cambio de hojas",
+    "cambiar la hoja",
+    "cambio la hoja",
+    "cambio las hojas",
+    "cambio hoja",
+    "como se cambia",
+    "cómo se cambia",
+    "quebrar",
+    "quiebra",
+    "quiebro",
+    "romper segmento",
+    "descartar hojas",
+    "descarte"
+   ],
+   "va": "exp_hoja",
+   "set": {}
+  },
+  {
+   "p": [
+    "capacitacion",
+    "capacitación",
+    "capacitar",
+    "charla",
+    "entrenar",
+    "entrenamiento",
+    "induccion",
+    "inducción"
+   ],
+   "va": "exp_capacitar",
+   "set": {}
+  },
+  {
+   "p": [
+    "tipos de cuchillo",
+    "semiautomatico",
+    "semiautomático",
+    "automatico",
+    "automático",
+    "hoja oculta",
+    "desechable",
+    "retráctil",
+    "retractil"
+   ],
+   "va": "exp_tipos",
+   "set": {}
+  },
+  {
+   "p": [
+    "evaluacion",
+    "evaluación",
+    "propuesta",
+    "armar propuesta",
+    "dimensionar",
+    "mi rubro"
+   ],
+   "va": "v_rubro",
+   "set": {
+    "motivo": "Propuesta por rubro"
+   }
+  },
+  {
+   "p": [
     "prevencionista",
     "prevención",
     "prevencion",
@@ -1168,8 +1808,6 @@
   {
    "p": [
     "seguridad",
-    "retráctil",
-    "retractil",
     "zuncho",
     "zunchos",
     "film",
