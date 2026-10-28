@@ -42,9 +42,34 @@
   ]
  },
  "inicio": "inicio",
+ "bienvenida": "bienvenida",
  "nodos": {
+  "bienvenida": {
+   "t": "¡Hola! Soy el asistente virtual de *OLFA Chile* 👋 (Imex Estado Ltda., distribuidor exclusivo).\n\n*Cuéntame con tus palabras qué necesitas* (por ejemplo: «cuchillos de seguridad para una bodega» o «hojas para mi A-1») o elige una opción. Cuando quieras, te conecto con un ejecutivo.\n\nAl escribirme aceptas que usemos tus datos para atenderte: {SITIO}politica-de-privacidad/",
+   "op": [
+    [
+     "Elegir cuchillo",
+     "uso_tipo",
+     {
+      "motivo": "Cotización de cuchillos o cortadores"
+     }
+    ],
+    [
+     "Repuestos y hojas",
+     "hoja_tipo",
+     {
+      "motivo": "Repuestos y hojas"
+     }
+    ],
+    [
+     "Más opciones",
+     "inicio",
+     {}
+    ]
+   ]
+  },
   "inicio": {
-   "t": "¡Hola! Soy el asistente de *OLFA Chile* 👋 Somos Imex Estado Ltda., distribuidor exclusivo de OLFA: cuchillos de seguridad, cortadores industriales, de oficina y manualidades, y sus repuestos.\n\nTe oriento en pocos pasos y, cuando quieras, te conecto con un ejecutivo. ¿Qué necesitas?",
+   "t": "Estas son todas las opciones. Elige una o escríbeme con tus palabras qué necesitas 👇",
    "op": [
     [
      "Cuchillos y cortadores",

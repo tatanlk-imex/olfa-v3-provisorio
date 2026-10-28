@@ -145,7 +145,7 @@
     fetch(B.flujo).then(function (r) { return r.json(); }).then(function (d) {
       F = d;
       if (cargarEstado() && E.log.length) { E.log.forEach(function (m) { burbuja(m[0], m[1], true); }); var n = F.nodos[E.nodo]; if (n && n.op) { chips(n.op.map(function (o) { return { t: o[0], a: o[1], s: o[2] || {} }; })); } }
-      else { mostrarNodo(F.inicio); }
+      else { mostrarNodo(F.bienvenida || F.inicio); }
     }).catch(function () { burbuja("bot", "No pude cargar el asistente. Llámanos o escribe por el formulario del sitio.", true); });
   }
   function abrir() { ventana.classList.add("on"); btnAbrir.style.display = "none"; iniciar(); setTimeout(function () { txt.focus(); }, 50); }
